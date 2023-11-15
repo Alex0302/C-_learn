@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿// Треугольник Серпинского
+
+Console.Clear();
 
 Console.CursorVisible = false;
 
@@ -13,14 +15,14 @@ Console.SetCursorPosition(left2,top2);
 Console.WriteLine("+");
 
 int left3 = 80;
-int top3 = 120;
+int top3 = 28;
 Console.SetCursorPosition(left3,top3);
 Console.WriteLine("+");
 
 int left = (left1 + left2) / 2;
 int top = (top1 + top2) / 2;
 
-int count = 10;
+int count = 1000;
 int step = 0;
 
 while (step < count) 
