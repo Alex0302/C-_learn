@@ -1,5 +1,6 @@
 using Model;
 using Infrastructure;
+using Persistance;
 
 namespace ContactApplication;
 
@@ -7,19 +8,23 @@ public class App
 {
    public static void Run()
    {
-        Contact contact1 = new Contact();
-        contact1.Firstname = "Aleksey";
-        contact1.LastName = "Maltsev";
-        contact1.DayOfBirth = new DateOnly (1990,8,28);
-        contact1.Mail = "1@ya.ru";
+        PrinterRepository printerRepository = new();
+        ContactCreator contactCreator = new();
+        ContactRepository repo = new();
+        
+        for (int i = 0; i < 10; i++)
+        {
+            repo.Append(contactCreator.GetContact());
+        }
 
-        Contact contact2 = new Contact(
-            "Aleksey",
-            "Maltsev",
-            new DateOnly (1990,8,28),"m@ya.ru");
+        Contact contact1 = new Contact("Алексей","Пупкин","+7 (221) 222-47-77",DateOnly.Parse("01.01.2023"),"эх@мыло.рф");
 
-        ContactPrint printer = new ContactPrint();
-        string out = printer.ContactToString(contact1);
-        Console.WriteLine(out);
+        repo.Append(contact1);
+        string res = printerRepository.Print(repo);
+        Console.WriteLine(res);
+
+        // Contact[] resarr =  repo.GetAll();
+
+        // Console.WriteLine(resarr);
    } 
 }

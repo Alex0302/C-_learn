@@ -1,3 +1,5 @@
+using Model;
+
 namespace Persistance;
 
 public class ContactRepository
@@ -10,5 +12,10 @@ public class ContactRepository
     public void Append (Contact contact)
     {
         this.storage.Add(contact);
+    }
+
+    public Contact[] GetAll()
+    {
+        return this.storage.ToArray();
     }
 }

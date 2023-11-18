@@ -2,3 +2,13 @@ C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP
 C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\domain\obj\Debug\net7.0\domain.AssemblyInfoInputs.cache
 C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\domain\obj\Debug\net7.0\domain.AssemblyInfo.cs
 C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\domain\obj\Debug\net7.0\domain.csproj.CoreCompileInputs.cache
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\bin\Debug\net7.0\domain.exe
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\bin\Debug\net7.0\domain.deps.json
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\bin\Debug\net7.0\domain.runtimeconfig.json
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\bin\Debug\net7.0\domain.dll
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\bin\Debug\net7.0\domain.pdb
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\obj\Debug\net7.0\domain.dll
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\obj\Debug\net7.0\refint\domain.dll
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\obj\Debug\net7.0\domain.pdb
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\obj\Debug\net7.0\domain.genruntimeconfig.cache
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\Domain\obj\Debug\net7.0\ref\domain.dll

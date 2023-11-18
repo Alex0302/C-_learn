@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "stBehl83JUY2rqcuL8bWDfaAkqDC//ZURpDCXaskCND54TvdcHr+nzAD81ucc62uUPH5lTv9/wsdjy18aP6muA==",
+  "dgSpecHash": "GvhYmBhSJGMBiDSsDA0Z14i/9G5Rmp9Hl6ReYTJsmmxvQ3Bw61BEtwyEbttQEHEWZfQYPCObcopbbQly4AiUHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\amalc\\OneDrive\\Документы\\Обучение C#\\15112023\\EX002APP\\domain\\domain.csproj",
+  "projectFilePath": "C:\\Users\\amalc\\OneDrive\\Документы\\Обучение C#\\15112023\\EX002APP\\Domain\\domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

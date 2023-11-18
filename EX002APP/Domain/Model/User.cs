@@ -5,7 +5,10 @@ public class User
 {
     public User(string login)
     {
-        login = login;
+        this.Password = Guid.NewGuid().ToString().Substring(0,8);
+        this.Login = login;
     }
-    private string Login;
+    public string Login {get; set;}
+    private string Password {get; set;}
+
 }
