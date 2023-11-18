@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amalc\\OneDrive\\Документы\\Обучение C#\\15112023\\part_002\\part_002.csproj",
-      "projectName": "part_002",
-      "projectPath": "C:\\Users\\amalc\\OneDrive\\Документы\\Обучение C#\\15112023\\part_002\\part_002.csproj",
+      "projectUniqueName": "C:\\Users\\amalc\\OneDrive\\Документы\\Обучение C#\\15112023\\part_005\\part_005.csproj",
+      "projectName": "part_005",
+      "projectPath": "C:\\Users\\amalc\\OneDrive\\Документы\\Обучение C#\\15112023\\part_005\\part_005.csproj",
       "packagesPath": "C:\\Users\\amalc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amalc\\OneDrive\\Документы\\Обучение C#\\15112023\\part_002\\obj\\",
+      "outputPath": "C:\\Users\\amalc\\OneDrive\\Документы\\Обучение C#\\15112023\\part_005\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\amalc\\AppData\\Roaming\\NuGet\\NuGet.Config",

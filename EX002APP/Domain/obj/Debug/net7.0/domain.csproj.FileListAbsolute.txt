@@ -1,0 +1,4 @@
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\domain\obj\Debug\net7.0\domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\domain\obj\Debug\net7.0\domain.AssemblyInfoInputs.cache
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\domain\obj\Debug\net7.0\domain.AssemblyInfo.cs
+C:\Users\amalc\OneDrive\Документы\Обучение C#\15112023\EX002APP\domain\obj\Debug\net7.0\domain.csproj.CoreCompileInputs.cache
