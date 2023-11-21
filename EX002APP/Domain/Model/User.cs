@@ -9,6 +9,6 @@ public class User
         this.Login = login;
     }
     public string Login {get; set;}
-    private string Password {get; set;}
+    public string Password {get; set;}
 
 }

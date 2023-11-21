@@ -18,4 +18,18 @@ public class ContactRepository
     {
         return this.storage.ToArray();
     }
+
+    public override string ToString()
+    {
+        string output = String.Empty;
+
+        var contacts = this.GetAll();
+
+        for (int i = 0; i < contacts.Length; i++)
+        {
+            output += $"{contacts[i]}\n";
+        }
+
+        return output;
+    }
 }
