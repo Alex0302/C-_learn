@@ -22,6 +22,8 @@ public string Fax {get; set;}
 public string Name {get; set;}
 public string OGRN {get; set;}
 
+public int ManagerId {get; set;}
+
 public override string NickName
 {
     get
@@ -34,6 +36,7 @@ public override string NickName
     {
         string output = string.Empty;
 
+        output += $"Id: {this.Id}\n";
         output += $"Name: {this.Name}\n";
         output += $"OGRN: {this.OGRN}\n";
         output += base.ToString();

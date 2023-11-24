@@ -1,18 +1,25 @@
 using Model;
 
 namespace Infrastructure;
-public class UserContactCreator : ContactCreator
+public class UserContactCreator : IContactCreator
 {
+    private static int globalId;
+
+    static UserContactCreator()
+    {
+        globalId = 1;
+    }
+
     private string[] firstNames;
     private string[] lastNames;
     public UserContactCreator(
-        string pathToFirstNamesFile = "firstNames.txt",
-        string pathToLastNamesFile = "lastNames.txt")
+        string pathToFirstNamesFile = "first_Names.txt",
+        string pathToLastNamesFile = "last_Names.txt")
         {
             this.firstNames = File.ReadAllLines(pathToFirstNamesFile);
             this.lastNames = File.ReadAllLines(pathToLastNamesFile);
         }
-    public override UserContact GetContact()
+    public Contact GetContact()
     {
         int lengthFn = firstNames.Length;
         int lengthLn = lastNames.Length;
@@ -30,8 +37,10 @@ public class UserContactCreator : ContactCreator
             Random.Shared.Next(100,1000),
             Random.Shared.Next(10,100),
             Random.Shared.Next(10,100)
-        
         );
+
+        contact.Id = globalId ++;
+
         return contact;
     }
 }

@@ -1,21 +1,24 @@
 using Model;
+using Persistance;
 
 namespace Infrastructure;
-public class CompanyContactCreator : ContactCreator
+public class CompanyContactCreator : IContactCreator
 {
+    private readonly Repository<UserContact> userRepo;
     private string[] companyNames;
     // private string[] lastNames;
-    public CompanyContactCreator()
+    public CompanyContactCreator(Repository<UserContact> userRepo)
         {
-            this.companyNames = new string[]
+            this.companyNames = new string[100];
+            
+            for (int i = 1; i < this.companyNames.Length; i++)
             {
-                "Компания1",
-                "Компания2",
-                "Компания3",
-                "Компания4"
-            };
+                this.companyNames[i] = $"Компания {Guid.NewGuid().ToString().Substring(0, 5)}";
+            }
+
+            this.userRepo = userRepo;
         }
-    public override CompanyContact GetContact()
+    public Contact GetContact()
     {
         int length = this.companyNames.Length;
         string name = this.companyNames[Random.Shared.Next(length)];
@@ -45,6 +48,11 @@ public class CompanyContactCreator : ContactCreator
         
         );
         contact.OGRN = $"{Random.Shared.Next(1000000,9999999)}";
+        
+        UserContact[] userContacts = userRepo.GetAll();
+        
+        contact.ManagerId = userContacts[Random.Shared.Next(userContacts.Length)].Id;
+        
         return contact;
     }
 }

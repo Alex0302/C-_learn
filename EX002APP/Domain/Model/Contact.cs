@@ -19,7 +19,18 @@ public class Contact
             this.TelefonNumber = telefonNumber;
 
         }
+        public int Id {get; set;}
        public virtual string NickName {get;}
        public  string TelefonNumber {get; set;}
+
+    public override string ToString()
+    {
+        string output = string.Empty;
+
+        output += $"Id: {this.Id}\n";
+        output += $"TelefonNumber: {this.TelefonNumber}\n";
+        
+        return output;
+    }
 
 }

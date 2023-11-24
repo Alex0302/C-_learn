@@ -9,21 +9,21 @@ public class App
 {
    public static void Run()
    {
-        // PrinterRepository printerRepository = new();
-        ContactCreator ContactCreator = new UserContactCreator();
-        ContactCreator companyContactCreator = new CompanyContactCreator();
-        ContactRepository repo = new();
+        200.Create("first_Names.txt", "Имя");
+        200.Create("last_Names.txt", "Фамилия");
         
-        for (int i = 0; i < 10; i++)
+        // PrinterRepository printerRepository = new();
+        UserContactCreator contactCreator = new UserContactCreator();
+        Repository<UserContact> userRepository = new();
+        CompanyContactCreator companyContactCreator = new CompanyContactCreator(userRepository);
+        Repository<CompanyContact> companyRepository = new();
+        
+        for (int i = 0; i < 5; i++)
         {
-            if (Random.Shared.Next(2)==0)
-            {
-                repo.Append(ContactCreator.GetContact());
-            }
-            else
-            {
-                repo.Append(companyContactCreator.GetContact());
-            }
+
+                userRepository.Append((UserContact)contactCreator.GetContact());
+      
+                companyRepository.Append((CompanyContact)companyContactCreator.GetContact());
             
         }
 
@@ -47,9 +47,19 @@ public class App
 
         // UserContact uc = new UserContact();
         // System.Console.WriteLine(uc.ToString());
-        foreach (Contact item in repo.GetAll())
+        foreach (UserContact item in userRepository.GetAll())
         {
             Console.WriteLine(item.NickName);
+        }
+
+        foreach (CompanyContact item in companyRepository.GetAll())
+        {
+            Console.WriteLine(item.NickName + " " +item.ManagerId);
+        }
+
+        foreach (CompanyContact item in companyRepository.GetAll())
+        {
+            Console.WriteLine($"{item.NickName}: рук.: {userRepository.Get(item.ManagerId).FirstName}");
         }
    } 
 }

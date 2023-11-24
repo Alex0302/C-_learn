@@ -1,6 +1,6 @@
 namespace Model;
 
-    public class UserContact : Contact
+    public class UserContact : Contact, IComparable<UserContact>, IEquatable<UserContact>
     {
        public UserContact() : 
        this(string.Empty,
@@ -38,6 +38,27 @@ namespace Model;
         }
     }
 
+    public int CompareTo(UserContact other)
+    {
+        // if (this.Id > other.Id) return 1;
+        // else if (this.Id == other.Id) return 0;
+        // else return -1;
+        
+        return this.LastName.CompareTo(other.LastName);
+    }
+
+    public bool Equals(UserContact other)
+    {
+        return this.FirstName == other.FirstName
+            && this.LastName == other.LastName
+            && this.TelefonNumber == other.TelefonNumber;
+
+    }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
     public override string ToString()
     {
         string output = string.Empty;
