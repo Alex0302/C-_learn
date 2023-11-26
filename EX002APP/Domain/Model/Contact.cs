@@ -5,7 +5,7 @@ public class Contact
            public Contact()
        {
             // this.NickName = string.Empty;
-            this.TelefonNumber = string.Empty;
+            this.TelefonNumber = String.Empty;
 
        }
        

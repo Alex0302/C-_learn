@@ -1,4 +1,6 @@
+using Logger;
 using Model;
+using Proxy;
 
 namespace Persistance;
 
@@ -6,9 +8,11 @@ public class Repository<T> : IRepository<T>
 where T : Contact
 {
     private List<T> storage;
-    public Repository()
+    private Ilogger logger;
+    public Repository(Ilogger logger = null)
     {
         storage = new List<T>();
+        this.logger = new ProxyLogger(logger).GetLogger();
     }
     public void Append (T model)
     {
@@ -17,6 +21,8 @@ where T : Contact
 
     public T Get(int id)
     {
+        
+        this.logger.Log($"Repository<{typeof(T).Name}> попытка обращения к методу public T Get(int id)");
         foreach (var item in this.storage)
         {
             if (item.Id == id) return item;
