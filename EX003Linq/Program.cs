@@ -13,7 +13,7 @@ public partial class Program
         Console.WriteLine(method(1, 2));
 
 
-        int result = Calculate(20, 10, delegate (int x, int y)
+        int result = Calculate(20, 10, (int x, int y) =>
     {
         return x + y;
     });
